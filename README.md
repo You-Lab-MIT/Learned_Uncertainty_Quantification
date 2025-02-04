@@ -25,6 +25,12 @@ conda env create -f environment.yml
 source activate learned_uncertainty
 ```
 
+# Dataset:
+
+The FMD dataset we used can be downloaded [here](https://github.com/yinhaoz/denoising-fluorescence)
+The Experimental MPM dataset we used can be downloaded [here](https://drive.google.com/drive/folders/1DYUYBe7rm--mcpPVPKBcuhgHmfooy9e7?usp=sharing)
+
+
 # Getting Started:
 
 To get started, download the weights for our finetuned model here:
