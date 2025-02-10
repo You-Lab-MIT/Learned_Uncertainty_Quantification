@@ -27,20 +27,17 @@ source activate learned_uncertainty
 
 # Dataset:
 
-The FMD dataset we used can be downloaded [here](https://github.com/yinhaoz/denoising-fluorescence)
+The FMD dataset we used can be downloaded [here](https://github.com/yinhaoz/denoising-fluorescence) <br>
 The Experimental MPM dataset we used can be downloaded [here](https://drive.google.com/drive/folders/1DYUYBe7rm--mcpPVPKBcuhgHmfooy9e7?usp=sharing)
 
 
 # Getting Started:
 
-To get started, download the weights for our finetuned model here:
+To get started, download the weights and `model.config` for our finetuned model here:
 
-[weights](https://drive.google.com/file/d/1tTP6eeCMWohNpm9i2Mq49IbK-M6VXpE8/view?usp=sharing)
+- [Weights](https://drive.google.com/file/d/1t7hAASo-FFw1SOTXDozE5vhFgeDwk11s/view?usp=sharing)  
+- [Model Config](https://drive.google.com/file/d/1a28mvw4ihhQh38cCNJEa_ciLdT0szpRn/view?usp=sharing)
 
-Create an "Experiments" directory and put the finetuned model weights in the folder
-```
-./Learned_Uncertainty_Quantification/Experiments
-```
-Once finished, open quickstart.ipynb and get started!
+Once finished, put these files in the main repo, open either quickstart_FMD.ipynb or quickstart_MPM and get started!
 
 
