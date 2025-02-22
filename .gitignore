@@ -176,3 +176,6 @@ cython_debug/
 
 runs/
 quickstart_samples/
+finetuned_weights.pth
+FMD_samples.npz
+MPM_samples.npz

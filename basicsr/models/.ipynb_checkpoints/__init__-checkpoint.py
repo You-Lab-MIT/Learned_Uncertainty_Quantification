@@ -6,8 +6,10 @@
 # ------------------------------------------------------------------------
 import importlib
 from os import path as osp
+import torch
 
 from basicsr.utils import get_root_logger, scandir
+from basicsr.utils.options import parse
 
 # automatically scan and import model modules
 # scan all the files under the 'models' folder and collect files ending with
@@ -50,3 +52,30 @@ def create_model(opt):
     logger = get_root_logger()
     logger.info(f'Model [{model.__class__.__name__}] is created.')
     return model
+
+
+def load_finetuned_model(weight_path, config_path):
+    """
+    Loads finetuned weights into the NAFNet model.
+
+    Args:
+        weight_path (str): Path to the finetuned weights file (.pth).
+        config_path (str): Path to the model configuration file (.yml).
+        device (str or torch.device, optional): Device to load the model on (default: auto-detect).
+
+    Returns:
+        torch.nn.Module: The finetuned NAFNet model.
+    """
+    device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+
+    finetuned_model_weights = torch.load(weight_path, map_location=device)
+
+    opt = parse(config_path, is_train=False)
+    opt['dist'] = False
+
+    NAFNET_model = create_model(opt)
+    NAFNET_model = NAFNET_model.net_g
+    NAFNET_model.load_state_dict(finetuned_model_weights['params'])
+
+    print("Finetuned weights loaded successfully!")
+    return NAFNET_model
