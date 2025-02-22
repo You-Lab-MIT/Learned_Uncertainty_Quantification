@@ -3,10 +3,10 @@
 The official PyTorch implementation of the [Learned, Uncertainty-driven Adaptive Acquisition for Photon-Efficient Multiphoton Microscopy paper](https://arxiv.org/abs/2310.16102)
 
 <div align="center">
-  <img src="./readme_graphics/teaser.gif" width="80%" />
+  <img src="./readme_graphics/FMD_uncertainty_trend.gif" width="80%" />
   <br/>
   <div align="left" width="60%">
-    <figcaption display="table-caption" width="60%"> <b>Image prediction and predicted uncertainty when denoising using 1 to 5 noisy multiphoton microscopy images. As the number of measurements increases, the predicted image more closely matches the ground truth, and the pixel-wise uncertainty decreases.</b></figcaption>
+    <figcaption display="table-caption" width="60%"> <b>Image prediction and predicted uncertainty when denoising using 1 to 20 noisy scanning microscopy images. As the number of measurements increases, the predicted image more closely matches the ground truth, and the pixel-wise uncertainty decreases.</b></figcaption>
   </div>
 </div>
 
@@ -33,10 +33,10 @@ The Experimental MPM dataset we used can be downloaded [here](https://drive.goog
 
 # Getting Started:
 
-To get started, download the weights and `model.config` for our finetuned model here:
+To get started, download the weights and visualization data for our finetuned model here:
 
 - [Weights](https://drive.google.com/file/d/1t7hAASo-FFw1SOTXDozE5vhFgeDwk11s/view?usp=sharing)  
-- [Model Config](https://drive.google.com/file/d/1a28mvw4ihhQh38cCNJEa_ciLdT0szpRn/view?usp=sharing)
+- [Visualization Data]()
 
 Once finished, put these files in the main repo, open either quickstart_FMD.ipynb or quickstart_MPM and get started!
 
