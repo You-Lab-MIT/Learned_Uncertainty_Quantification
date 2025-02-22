@@ -38,7 +38,7 @@ The Experimental MPM dataset we used can be downloaded [here](https://drive.goog
 To get started, download the weights and visualization data for our finetuned model here:
 
 - [Weights](https://drive.google.com/file/d/1t7hAASo-FFw1SOTXDozE5vhFgeDwk11s/view?usp=sharing)  
-- [Visualization Data]()
+- [Visualization Data](https://drive.google.com/file/d/1UbOdRrBubjAznmHAkf5Rtcvx3_t90a2t/view?usp=sharing)
 
 Once finished, put these files in the main repo, open either quickstart_FMD.ipynb or quickstart_MPM and get started!
 
