@@ -1,9 +1,11 @@
-# Learned, Uncertainty-driven Adaptive Acquisition
+# Learned, uncertainty-driven adaptive acquisition for photon-efficient scanning microscopy
 
-The official PyTorch implementation of the [Learned, Uncertainty-driven Adaptive Acquisition for Photon-Efficient Multiphoton Microscopy paper](https://arxiv.org/abs/2310.16102)
+The official PyTorch implementation of the [Learned, uncertainty-driven adaptive
+acquisition for photon-efficient scanning
+microscopy](https://arxiv.org/abs/2310.16102)
 
 <div align="center">
-  <img src="./readme_graphics/FMD_uncertainty_trend.gif" width="80%" />
+  <img src="./readme_graphics/FMD_uncertainty_trend.gif" width="70%" />
   <br/>
   <div align="left" width="60%">
     <figcaption display="table-caption" width="60%"> <b>Image prediction and predicted uncertainty when denoising using 1 to 20 noisy scanning microscopy images. As the number of measurements increases, the predicted image more closely matches the ground truth, and the pixel-wise uncertainty decreases.</b></figcaption>
@@ -39,5 +41,10 @@ To get started, download the weights and visualization data for our finetuned mo
 - [Visualization Data]()
 
 Once finished, put these files in the main repo, open either quickstart_FMD.ipynb or quickstart_MPM and get started!
+
+# Notes on Conformal Calibration:
+
+In section 3.2 of our paper, we explain the details of calibrating our predicted uncertainty intervals to ensure statistical coverage. The functions used for calibration can be found in conformal_distribution.ipynb. 
+
 
 
